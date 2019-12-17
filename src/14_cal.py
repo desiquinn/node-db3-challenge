@@ -22,3 +22,24 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
+# print('Calendar of March 2019')
+# print(calendar.month(2019,3,2,1))
+
+# print('Calendar for 2020')
+# print(calendar.calendar(2020,2,2,6,3))
+
+# print(datetime.today().month)
+# print(datetime.today().year)
+
+dt_month = datetime.today().month
+dt_year = datetime.today().year
+
+def print_cal(month = dt_month, year = dt_year):
+    print(calendar.month(year, month, 2, 1))
+    
+
+print_cal() #Should print december of 2019
+print_cal(2) #Should print february of 2019
+print_cal(2, 2020) #Should print february of 2020
+print_cal(2013, 5) #should throw error
