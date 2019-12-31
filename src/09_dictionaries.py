@@ -43,11 +43,12 @@ print(waypoints)
 # Modify the dictionary with name "a place" such that its longitude
 # value is -130 and change its name to "not a real place"
 # YOUR CODE HERE
-waypoints[0]["lon"] = -130
-waypoints[0]["name"] = "not a real place"
+
+# waypoints[0]["lon"] = -130
+# waypoints[0]["name"] = "not a real place"
 
 # could i have combined these somehow?
-
+waypoints[0].update({"lon": -130, "name": "not a real place"})
 print(waypoints)
 
 # Write a loop that prints out all the field values for all the waypoints
@@ -56,5 +57,5 @@ print(waypoints)
 # what does it mean by field values? - The pair of logitude and lattitude values
 
 for i in range(len(waypoints)):
-    print(waypoints[i]["lon"] ,",", waypoints[i]["lat"])
-
+    # print(waypoints[i]["lon"] ,",", waypoints[i]["lat"])
+    print(waypoints[i].values())
