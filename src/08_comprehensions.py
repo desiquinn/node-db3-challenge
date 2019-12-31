@@ -10,18 +10,18 @@ for more info regarding list comprehensions.
 
 # Write a list comprehension to produce the array [1, 2, 3, 4, 5]
 
-y = []
-for a in [1, 2, 3, 4, 5]:
-    y.append(a)
+y = [i for i in range(1, 6)]
+# for a in [1, 2, 3, 4, 5]:
+#     y.append(a)
 
 print (y)
 
 # Write a list comprehension to produce the cubes of the numbers 0-9:
 # [0, 1, 8, 27, 64, 125, 216, 343, 512, 729]
 
-y = []
-for b in range(10):
-    y.append(b**3)
+y = [i**3 for i in range(10)]
+# for b in range(10):
+#     y.append(b**3)
 
 print(y)
 
@@ -30,9 +30,9 @@ print(y)
 
 a = ["foo", "bar", "baz"]
 
-y = []
-for c in a:
-    y.append(c.upper())
+y = [e.upper() for e in a]
+# for c in a:
+#     y.append(c.upper())
 
 print(y)
 
@@ -42,9 +42,9 @@ print(y)
 x = input("Enter comma-separated numbers: ").split(',')
 
 # What do you need between the square brackets to make it work?
-y = []
-for d in x:
-    if int(d) % 2 == False:
-        y.append(d)
+y = [e for e in x if int(e) % 2 == False]
+# for d in x:
+#     if int(d) % 2 == False:
+#         y.append(d)
 
 print(y)
