@@ -42,7 +42,15 @@ def print_cal(month = dt_month, year = dt_year):
         print("Input must include a month (1-12) or a month and year (month, year) combination")
     
 
-print_cal() #Should print december of 2019 (or current month and year)
-print_cal(2) #Should print february of 2019
-print_cal(2, 2020) #Should print february of 2020
-print_cal(2013, 5) #should throw error
+# print_cal() #Should print december of 2019 (or current month and year)
+# print_cal(2) #Should print february of 2019
+# print_cal(2, 2020) #Should print february of 2020
+# print_cal(2013, 5) #should throw error
+# print_cal(int(sys.argv[1]), int(sys.argv[2])) #should take input from console
+
+if len(sys.argv) == 3:
+    print_cal(int(sys.argv[1]), int(sys.argv[2]))
+elif len(sys.argv) == 2:
+    print_cal(int(sys.argv[1]))
+else:
+    print_cal()
