@@ -16,8 +16,7 @@ print(f1(1, 2))
 # YOUR CODE HERE
 
 def f2(*nums):
-    for i in nums:
-        return sum(nums)
+    return sum(nums)
    
 
 print(f2(1))                    # Should print 1
